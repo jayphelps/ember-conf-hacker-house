@@ -1,0 +1,91 @@
+html, body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  background-color: #414042;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.3) 100%), url(/img/bg-dark.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.3) 100%), url(/img/bg-dark.png);
+}
+
+body {
+  margin: 40px;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+.color-orange {
+  color: #e14c31;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+header > h1 {
+  color: #e14c31;
+}
+
+header > h2 {
+  color: #fff;
+}
+
+footer {
+  font-size: 11px;
+  max-width: 400px;
+}
+
+footer > a,
+footer > a:link,
+footer > a:visited {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+footer > a:hover {
+  color: #fff;
+}
+
+.night-select {
+  display: table;
+  text-align: center;
+  width: 100%;
+  max-width: 960px;
+  border-top: 1px solid rgba(167, 169, 172, 0.4);
+  border-bottom: 1px solid rgba(167, 169, 172, 0.4);
+}
+
+.night-option {
+  cursor: pointer;
+  display: table-cell;
+  border-left: 1px solid rgba(167, 169, 172, 0.4);
+  padding: 18px;
+}
+
+.night-option:last-child {
+  border-right: 1px solid rgba(167, 169, 172, 0.4);
+}
+
+.night-option > h3 {
+  margin: 10px;
+  font-size: 19px;
+}
+
+.night-option > h4 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.night-option > p {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.night-option.selected {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+.night-option.selected > h4 {
+  color: #e14c31;
+}

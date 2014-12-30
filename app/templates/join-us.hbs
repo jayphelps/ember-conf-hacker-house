@@ -1,0 +1,28 @@
+<a href="https://github.com/jayphelps/ember-conf-hacker-house"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+<header>
+  <h1>EmberConf 2015 Hacker House</h1>
+  <h2>Select which Nights you'll be staying</h2>
+</header>
+<main>
+  <div class="night-select">
+    {{night-option date="03/02/15" cost=nightCost personCount=mondayCount}}
+    {{night-option date="03/03/15" cost=nightCost personCount=tuesdayCount}}
+    {{night-option date="03/04/15" cost=nightCost personCount=wednesdayCount}}
+  </div>
+  <p>
+  {{stripe-checkout
+    class="btn btn-primary"
+    image="/img/emberconf-logo.jpg"
+    name="EmberConf Hacker House"
+    description="Confirm your spot."
+    amount=cartAmountInCents
+    label="Checkout"
+    panelLabel="Submit "
+    isDisabled=hasNoNightsSelected
+    action="processStripeToken"
+  }}
+  </p>
+</main>
+<footer>
+  First come, first serve basis. Limited number of slots available. 100% refundable until <b>February 2nd</b>, after that we'll do our best to find someone to take your place and if successful will refund. All proceeds fund the hacker house AirBnB rental. Any unforeseen proceeds will be refunded back to you. Checkout is done securely in an iframe using https using <a href="https://github.com/sweettooth/ember-cli-stripe">ember-cli-stripe</a>. This event is not sponsored or endorsed by any company or employer. All your base are belong to us. j/k..but seriously.
+</footer>
